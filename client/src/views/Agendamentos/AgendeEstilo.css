@@ -1,0 +1,53 @@
+.AgendaEstilo {
+    font-family: "Poppins", serif;
+    color: #fff;
+    background: linear-gradient(200deg, #B0B0B0, #FAD0C9);
+    height: 100vh;
+  }
+
+  .logo-japa-Cursos {
+    transition: 0.2s ease-in-out;
+  }
+  
+  .logo-japa-Cursos:hover {
+    cursor: pointer;
+    color: #86392c
+  }
+
+  .header-Agenda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+  }
+  
+  .header .h1 {
+    font-size: 1.5rem;
+  }
+  
+  .header-logo-Agenda {
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  
+  .header-logo-Agenda h1 {
+    margin-left: 5px;
+  }
+  
+  .nav-Agenda {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-Agenda>li>a {
+    margin-left: 20px;
+    color: black;
+    transition: 0.2 ease-in-out;
+    text-decoration: none;
+  }
+  
+  .nav-Agenda>li>a:hover {
+    cursor: pointer;
+    color: #86392c
+  }

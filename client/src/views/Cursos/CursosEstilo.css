@@ -1,0 +1,138 @@
+.Cursos {
+  font-family: "Poppins", serif;
+  color: #fff;
+  background: linear-gradient(200deg, #B0B0B0, #FAD0C9);
+  height: 100vh;
+}
+
+.logo-japa-Cursos {
+  transition: 0.2s ease-in-out;
+}
+
+.logo-japa-Cursos:hover {
+  cursor: pointer;
+  color: #86392c
+}
+
+.header-Cursos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+.header .h1 {
+  font-size: 1.5rem;
+}
+
+.header-logo-Cursos {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.header-logo-Cursos h1 {
+  margin-left: 5px;
+}
+
+.nav-Cursos {
+  display: flex;
+  list-style: none;
+}
+
+.nav-Cursos>li>a {
+  margin-left: 20px;
+  color: black;
+  transition: 0.2 ease-in-out;
+  text-decoration: none;
+}
+
+.nav-Cursos>li>a:hover {
+  cursor: pointer;
+  color: #86392c
+}
+
+.header3 {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  margin-top: -40px;
+  margin-bottom: 90px;
+}
+
+.course-section {
+  padding: 20px;
+}
+
+.section-header {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color:  #86392c;
+}
+
+.course-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.course-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 550px;
+  background: #f9f9f9;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgb(0, 0, 0, 0.8);
+}
+
+.course-logo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.course-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.course-description {  
+  color: #666;
+  text-align: center; 
+}
+
+.course-status {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.btn-adquirir {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-adquirir:hover {
+  background-color: #0056b3;
+}
+
+.logo-cabelo{
+  width: auto;
+  height: 272px;
+}
