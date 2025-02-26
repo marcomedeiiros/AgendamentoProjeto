@@ -108,7 +108,7 @@ a {
   margin: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 0 20px rgb(0, 0, 0, 0.9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
 }
 
 .course-logo {
@@ -122,11 +122,13 @@ a {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 5px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); 
 }
 
 .course-description {  
   color: #272727;
   text-align: center; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
 }
 
 .course-status {

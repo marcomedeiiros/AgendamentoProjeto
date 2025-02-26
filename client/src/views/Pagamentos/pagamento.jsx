@@ -11,9 +11,9 @@ function PagamentoEstilo() {
     cardNumber: '',
     expirationDate: '',
     email: '',
-    phone: '',  // Novo campo para número de telefone
-    address: '', // Novo campo para endereço
-    cvv: '' // Novo campo para número de segurança (CVV)
+    phone: '', 
+    address: '', 
+    cvv: '' 
   });
 
   useEffect(() => {    

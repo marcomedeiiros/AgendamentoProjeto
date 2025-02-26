@@ -23,28 +23,36 @@ function Cursos() {
         <section className='course-section'>
           <h2 className='section-header'>Meus <span>cursos.</span></h2>
           <div className="course-cards">
-            
+
             <div className="course-card">
               <img src={imgs.nevou} alt="Curso Nevou - Métodos sem ardências" className='logo-cabelo' />
               <h2 className='course-title'>Nevou</h2>
-              <p className='course-description'>Métodos sem ardências, um curso inovador que ensina cortes de cabelo sem causar desconforto.</p>              
-              <button className="btn-adquirir">Adquirir</button>
+              <p className='course-description'>Métodos sem ardências, um curso inovador que ensina cortes de cabelo sem causar desconforto.</p>
+              <button className="btn-adquirir">
+                <i className="fa-solid fa-cart-shopping"></i> Adquirir
+              </button>
+
             </div>
 
-            
+
             <div className="course-card">
               <img src={imgs.pigmento} alt="Curso Pigmentado - Corte do Jaca Curtinho" className='logo-cabelo' />
               <h2 className='course-title'>Pigmentado</h2>
-              <p className='course-description'>Aprenda o famoso Corte do Jaca Curtinho, um estilo que está fazendo sucesso.</p>              
-              <button className="btn-adquirir">Adquirir</button>
+              <p className='course-description'>Aprenda o famoso Corte do Jaca Curtinho, um estilo que está fazendo sucesso.</p>
+              <button className="btn-adquirir">
+                <i className="fa-solid fa-cart-shopping"></i> Adquirir
+              </button>
             </div>
 
-            
+
             <div className="course-card">
               <img src={imgs.reflexo} alt="Curso Reflexo - Reflexo na risca" className='logo-cabelo' />
               <h2 className='course-title'>Reflexo</h2>
-              <p className='course-description'>Aperfeiçoe sua técnica com o curso Reflexo na risca, trazendo precisão para seus cortes.</p>              
-              <button className="btn-adquirir">Adquirir</button>
+              <p className='course-description'>Aperfeiçoe sua técnica com o curso Reflexo na risca, trazendo precisão para seus cortes.</p>
+              <button className="btn-adquirir">
+                <i className="fa-solid fa-cart-shopping"></i> Adquirir
+              </button>
+
             </div>
           </div>
         </section>

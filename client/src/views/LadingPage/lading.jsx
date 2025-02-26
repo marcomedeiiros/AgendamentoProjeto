@@ -23,8 +23,20 @@ function ladingEstilo() {
             <h1 >Transforme <br /> Seu Estilo com os<br /> Melhores Cortes<br /> <span>de Cabelo Masculino!</span></h1>
             <p>Oferecemos cursos especializados para barbeiros que querem evoluir e dominar os cortes de cabelo.
               Aprenda técnicas avançadas e se destaque no mercado comigo!</p>
-            <a href="https://api.whatsapp.com/"><button className='whatts-btn'>Whatsapp</button></a>
-            <a href="https://www.instagram.com/japa_dos_corte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><button className='insta-btn'>Instagram</button></a>
+            <div className="social-buttons">
+              <a href="https://api.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+                <button className="whatsapp-btn">
+                  <i className="fab fa-whatsapp"></i> WhatsApp
+                </button>
+              </a>
+
+              <a href="https://www.instagram.com/japa_dos_corte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                <button className="insta-btn">
+                  <i className="fab fa-instagram"></i> Instagram
+                </button>
+              </a>
+            </div>
+
           </div>
           <img src={imgs.japa} alt="japa do corte" className='logo-barbearia' />
 
@@ -58,7 +70,12 @@ function ladingEstilo() {
           <div className="text-agendar">
             <h1>Agende seu Corte ou Barba com Conforto <br /> <span>e Praticidade.</span></h1>
             <p>Na minha barbearia, a sua experiência vai além de um simples corte de cabelo. Ofereço um atendimento exclusivo, especializado em cortes modernos e serviços de barbearia, tudo feito sob medida para o seu estilo. Com meu sistema de agendamento online, você escolhe o horário que melhor se encaixa na sua rotina e garante um atendimento sem espera. Agende agora e viva a experiência de sair renovado, com a confiança de estar em boas mãos!</p>
-            <a href="/Agendamentos"><button className='btn-agenda'>Faça seu agendamento</button></a>
+            <a href="/Agendamentos">
+              <button className='btn-agenda'>
+                <i className="fa-solid fa-calendar-check"></i> 
+                Faça o seu agendamento!
+              </button>
+            </a>
             <p><strong>Endereço:</strong> Av. Presi Kennedy, 384 - Barramares, Vila Velha - ES</p>
             <p><strong>Horário de Funcionamento:</strong> Aos Sábados: 09:30 - 20:00</p>
           </div>
