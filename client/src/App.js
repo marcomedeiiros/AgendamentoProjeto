@@ -4,6 +4,8 @@ import LadingPage from './views/LadingPage/lading.jsx';
 import Agenda from './views/Agendamentos/Agende.jsx';
 import Cursos from './views/Cursos/Cursos.jsx';
 import Pagamentos from './views/Pagamentos/pagamento.jsx';
+import Carrinho from './views/Carrinho/cart.jsx';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Route path='Agendamentos' element={<Agenda />} />
         <Route path='Cursos' element={<Cursos />} />
         <Route path='Pagamentos' element={<Pagamentos />} />
+        <Route path='Carrinho' element={<Carrinho />} />
       </Routes>
     </BrowserRouter> 
   );

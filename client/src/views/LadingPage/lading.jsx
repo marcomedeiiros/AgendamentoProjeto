@@ -53,7 +53,7 @@ function ladingEstilo() {
 
             <div className="card">
               <a href="/Cursos"><img src={imgs.pigmento} alt="corte branco" className='logo-pigmento' /></a>
-              <h2 className='color'>Pigmentado</h2>
+              <h2 className='color'>Pigmentação</h2>
               <a href="/Cursos"><p className='color'>Veja mais informações...</p></a>
             </div>
 

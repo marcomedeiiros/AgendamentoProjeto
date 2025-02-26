@@ -59,10 +59,10 @@
 .logo-barbearia {
   height: 480px;
   margin-bottom: 80px;
-  border-radius: 20px;
-  width: auto;
-
+  border-radius: 30px;
+  width: auto;   
 }
+
 
 .text-foto {
   display: flex;
@@ -293,7 +293,7 @@ a {
 }
 
 .btn-agenda {
-  background: linear-gradient(200deg, #4A90E2, #50E3C2);
+  background: linear-gradient(100deg, #520c00, #FAD0C9);
   border: none;
   color: #fff; 
   height: 40px;
@@ -312,7 +312,7 @@ a {
 
 .btn-agenda:hover {
   cursor: pointer;     
-  background: linear-gradient(200deg, #50E3C2, #4A90E2);
+  background: linear-gradient(200deg, #FAD0C9, #520c00);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transform: scale(1.05)
   
