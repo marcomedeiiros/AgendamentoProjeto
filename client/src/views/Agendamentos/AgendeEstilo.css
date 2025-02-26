@@ -242,13 +242,13 @@ input:-webkit-autofill {
   font-size: 14px; 
   color: #333; 
   cursor: pointer; 
-  line-height: 1.5; 
+  line-height: 1.2; 
 }
 
 
-.checkbox-container .form-label:hover {
-  color: #007bff; 
-  text-decoration: underline; 
+.checkbox-container .form-label:hover {  
+  text-decoration: none; 
+  
 }
 
 
