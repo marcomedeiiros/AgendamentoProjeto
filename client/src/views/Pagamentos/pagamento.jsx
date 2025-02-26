@@ -10,7 +10,10 @@ function PagamentoEstilo() {
     cpf: '',
     cardNumber: '',
     expirationDate: '',
-    email: ''  
+    email: '',
+    phone: '',  // Novo campo para número de telefone
+    address: '', // Novo campo para endereço
+    cvv: '' // Novo campo para número de segurança (CVV)
   });
 
   useEffect(() => {    
@@ -112,12 +115,33 @@ function PagamentoEstilo() {
                   value={cardData.email}
                   onChange={handleChange}
                 />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Número de Telefone"
+                  value={cardData.phone}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Endereço Completo"
+                  value={cardData.address}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="cvv"
+                  placeholder="Número de Segurança (CVV)"
+                  value={cardData.cvv}
+                  onChange={handleChange}
+                />
               </div>
             )}
 
             {paymentMethod === 'pix' && (
               <div className="pix-qr-code">
-                <QRCodeCanvas value="https://pixapi.com" size={128} />
+                <QRCodeCanvas value="https://pixapi.com" size={256} />
                 <p>Escaneie para pagar via PIX</p>
               </div>
             )}

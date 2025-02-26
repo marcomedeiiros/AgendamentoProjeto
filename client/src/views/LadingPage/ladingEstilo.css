@@ -26,6 +26,7 @@
 
 .header .h1 {
   font-size: 1.5rem;
+  
 }
 
 .header-logo {
@@ -35,7 +36,7 @@
 }
 
 .header-logo h1 {
-  margin-left: 5px;
+  margin-left: 5px;  
 }
 
 .nav {
@@ -221,6 +222,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .Agendamentos{

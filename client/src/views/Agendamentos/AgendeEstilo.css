@@ -5,11 +5,11 @@
     height: 100vh;
   }
 
-  .logo-japa-Cursos {
+  .logo-japa-Agenda {
     transition: 0.2s ease-in-out;
   }
   
-  .logo-japa-Cursos:hover {
+  .logo-japa-Agenda:hover {
     cursor: pointer;
     color: #86392c
   }
@@ -23,6 +23,11 @@
   
   .header .h1 {
     font-size: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
   
   .header-logo-Agenda {
