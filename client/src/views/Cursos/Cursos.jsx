@@ -13,8 +13,8 @@ function Cursos() {
           </div>
           <ul className='nav-Cursos'>
             <li><a href="/">Início</a></li>
-            <li><a href="/Agendamentos">Agendamentos</a></li>
             <li><a href="/Cursos">Cursos</a></li>
+            <li><a href="/Agendamentos">Agendamentos</a></li>
           </ul>
         </header>
 

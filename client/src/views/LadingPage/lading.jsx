@@ -14,8 +14,8 @@ function ladingEstilo() {
           </div>
           <ul className='nav'>
             <li><a href="/">Início</a></li>
-            <li><a href="/Agendamentos">Agendamentos</a></li>
             <li><a href="/Cursos">Cursos</a></li>
+            <li><a href="/Agendamentos">Agendamentos</a></li>
           </ul>
         </header>
         <section className='text-foto'>
@@ -31,7 +31,7 @@ function ladingEstilo() {
         </section>
 
         <section className='tab-cursos'>
-          <h2 className='header2'>Meus <span>Cursos</span></h2>
+          <h2 className='header2'>Meus <span>Cursos.</span></h2>
           <div className="cards">
             <div className="card">
               <a href="/Cursos"><img src={imgs.nevou} alt="corte branco" className='logo-nevou' /></a>
