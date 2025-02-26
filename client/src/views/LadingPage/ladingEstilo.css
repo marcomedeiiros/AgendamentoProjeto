@@ -158,7 +158,7 @@
   align-items: center;
   flex-direction: column;
   width: 300px;
-  height: 300px;
+  height: 350px;
   background: #ffccc3;
   margin: 20px;
   border-radius: 20px;
@@ -175,7 +175,7 @@
   justify-content: center;
   align-items: center;
   height: 40px;
-  background-color: #FAD0C9;
+  background-color: #f1ccc5;
 }
 
 .footer p {
@@ -205,4 +205,84 @@
 .color:hover {
   cursor: pointer;
   color: #86392c;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 30px; 
+}
+
+.map-container iframe {
+  border-radius: 50px;  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+}
+
+.Agendamentos{
+  background: linear-gradient(200deg, #B0B0B0, #FAD0C9);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   width: 100%;
+   height: 60vh;
+}
+
+.text-agendar{
+  font-size: 1.5rem;
+  margin: 20px 0;
+  width: 500px;
+  margin-left: 100px;
+}
+
+.text-agendar p{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.text-agendar h1 span{
+  color: #520c00;
+}
+
+.text-agendar p strong{
+  color: #520c00;
+}
+
+.btn-agenda {
+  background: none;                
+  border: none;                    
+  color: #520c00;                   
+  font-size: 16px;                  
+  cursor: pointer;                 
+  position: relative;               
+  padding-bottom: 5px;              
+  transition: color 0.3s ease;      
+}
+
+.btn-agenda::after {
+  content: "";                      
+  position: absolute;               
+  bottom: 0;                        
+  left: 0;                          
+  width: 100%;                       
+  height: 2px;                      
+  background-color: #520c00;        
+  transform-origin: bottom left;    
+  transition: transform 0.3s ease, width 0.3s ease, background-color 0.3s ease; 
+}
+
+.btn-agenda:hover {
+  color: white;                     
+}
+
+.btn-agenda:hover::after {
+  transform: scaleX(1);              
+  transform-origin: bottom right;    
+  background-color: white;          
 }

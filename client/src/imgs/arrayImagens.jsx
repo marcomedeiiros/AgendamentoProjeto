@@ -8,6 +8,7 @@ const imgs = {
   nevou,
   pigmento,
   reflexo
+  
 };
 
 export default imgs;
