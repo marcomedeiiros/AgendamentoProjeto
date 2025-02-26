@@ -1,5 +1,6 @@
 import React from 'react';
 import "./AgendeEstilo.css";
+import imgs from '../../imgs/arrayImagens'; 
 
 function AgendaEstilo() {
   return (
@@ -62,7 +63,6 @@ function AgendaEstilo() {
                     />
                   </div>
                 </div>
-
 
                 <div className="input-box">
                   <label htmlFor="birthdate" className="form-label">

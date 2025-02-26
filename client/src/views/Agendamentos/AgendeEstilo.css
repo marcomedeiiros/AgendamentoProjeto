@@ -1,6 +1,5 @@
 .AgendaEstilo {
-  font-family: "Poppins", serif;  
-  background: linear-gradient(200deg, #B0B0B0, #FAD0C9);
+  font-family: "Poppins", serif;   
   height: 100vh;
 }
 
@@ -16,6 +15,7 @@
 .header-Agenda {
   display: flex;
   justify-content: space-between;
+  background: linear-gradient(200deg, #B0B0B0, #FAD0C9);
   align-items: center;
   padding: 20px 10%;
 }
@@ -48,12 +48,31 @@
 }
 
 
-.agendar{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh;
+.agendar {
+  position: relative;
+  width: 100%;
+  height: 91vh;
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
+
+
+.agendar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../imgs/planodefundo.png'); 
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); 
+  z-index: -1; 
+}
+
 .btn-default {
   background-color: #86392c;
   display: flex;
@@ -78,14 +97,15 @@
 }
 
 .form_container {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  height: 100%;
-  background-color: #f6f8ff;
+  position: relative;
+  z-index: 1; 
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);    
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 600px; 
+  width: 100%; 
+  box-sizing: border-box;
 }
 
 .form-header {
@@ -108,7 +128,8 @@
   border-radius: 30px;
   background-color: #86392c;
   left: 0;
-  bottom: 0;  
+  bottom: 0;
+  transform: translateY(2px);  
 }
 
 .form {
