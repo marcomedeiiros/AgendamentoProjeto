@@ -1,6 +1,6 @@
 import React from 'react';
 import "./AgendeEstilo.css";
-import imgs from '../../imgs/arrayImagens'; 
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function AgendaEstilo() {
   return (
@@ -61,6 +61,23 @@ function AgendaEstilo() {
                       placeholder="(XX) XXXXX-XXXX"
                       pattern="^\(\d{2}\) \d{5}-\d{4}$"
                     />
+                    <i class="fa-solid fa-mobile-screen"></i>
+                  </div>
+                </div>
+
+                <div className="input-box">
+                  <label htmlFor="email" className="form-label">
+                    E-mail
+                  </label>
+                  <div className="input-field">
+                    <input
+                      type="email"
+                      name="email"
+                      className="form-control"
+                      placeholder="Digite seu e-mail..."
+                      required
+                    />
+                    <i class="fa-solid fa-envelope"></i>
                   </div>
                 </div>
 
@@ -87,6 +104,7 @@ function AgendaEstilo() {
                       className="form-control"
                       placeholder="Deixe suas observações aqui..."
                     />
+                    <i class="fa-solid fa-bell"></i>
                   </div>
                 </div>
 

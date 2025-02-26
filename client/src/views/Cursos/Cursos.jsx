@@ -1,6 +1,8 @@
 import React from 'react';
 import "./CursosEstilo.css";
 import imgs from '../../imgs/arrayImagens';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function Cursos() {
   return (
@@ -19,7 +21,7 @@ function Cursos() {
         </header>
 
         <section className='course-section'>
-          <h2 className='section-header'>Meus <span>cursos</span></h2>
+          <h2 className='section-header'>Meus <span>cursos.</span></h2>
           <div className="course-cards">
             
             <div className="course-card">
