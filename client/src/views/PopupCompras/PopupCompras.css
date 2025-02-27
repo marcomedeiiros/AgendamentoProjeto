@@ -1,0 +1,34 @@
+.popup-overlay-compras {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-compras {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 300px;
+  font-family: Arial, sans-serif;
+}
+
+
+.popup-compras h2 {
+  color: #ca0700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.popup-compras p {
+  color: #333;
+  font-size: 16px;
+}

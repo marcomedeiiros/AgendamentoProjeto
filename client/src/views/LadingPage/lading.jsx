@@ -47,20 +47,26 @@ function ladingEstilo() {
           <div className="cards">
             <div className="card">
               <a href="/Cursos"><img src={imgs.nevou} alt="corte branco" className='logo-nevou' /></a>
-              <h2 className='color'>Nevou</h2>
-              <a href="/Cursos"><p className='color'>Veja mais informações...</p></a>
+              <h2 className='pintar'>Nevou</h2>
+              <a href="/Cursos">
+                <p className='color'>Veja mais informações...</p>
+              </a>
             </div>
 
             <div className="card">
               <a href="/Cursos"><img src={imgs.pigmento} alt="corte branco" className='logo-pigmento' /></a>
-              <h2 className='color'>Pigmentação</h2>
-              <a href="/Cursos"><p className='color'>Veja mais informações...</p></a>
+              <h2 className='pintar'>Pigmentação</h2>
+              <a href="/Cursos">
+                <p className='color'>Veja mais informações...</p>
+              </a>
             </div>
 
             <div className="card">
               <a href="/Cursos"><img src={imgs.reflexo} alt="corte branco" className='logo-reflexo' /></a>
-              <h2 className='color'>Reflexo</h2>
-              <a href="/Cursos"><p className='color'>Veja mais informações...</p></a>
+              <h2 className='pintar'>Reflexo</h2>
+              <a href="/Cursos">
+                <p className='color'>Veja mais informações...</p>
+              </a>
             </div>
 
           </div>
@@ -72,7 +78,7 @@ function ladingEstilo() {
             <p>Na minha barbearia, a sua experiência vai além de um simples corte de cabelo. Ofereço um atendimento exclusivo, especializado em cortes modernos e serviços de barbearia, tudo feito sob medida para o seu estilo. Com meu sistema de agendamento online, você escolhe o horário que melhor se encaixa na sua rotina e garante um atendimento sem espera. Agende agora e viva a experiência de sair renovado, com a confiança de estar em boas mãos!</p>
             <a href="/Agendamentos">
               <button className='btn-agenda'>
-                <i className="fa-solid fa-calendar-check"></i> 
+                <i className="fa-solid fa-calendar-check"></i>
                 Faça o seu agendamento!
               </button>
             </a>

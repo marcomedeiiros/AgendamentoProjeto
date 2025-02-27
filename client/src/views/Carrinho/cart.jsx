@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './cartEstilo.css'; 
 import imgs from '../../imgs/arrayImagens';
+import PopupCompras from '../PopupCompras/ComprasPopup'; 
 
 function Cart() {
   const [cartItems, setCartItems] = useState([
@@ -10,6 +11,7 @@ function Cart() {
   ]);
 
   const [isOpen, setIsOpen] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -23,6 +25,16 @@ function Cart() {
           : item
       )
     );
+  };
+
+  const handleCheckout = () => {
+    const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+    
+    if (totalQuantity === 0) {
+      setShowPopup(true);  
+    } else {
+      window.location.href = '/Pagamentos'; 
+    }
   };
 
   return (
@@ -42,21 +54,21 @@ function Cart() {
                     <p className="cart-item-price">R${item.price.toFixed(2)}</p> 
                     <div className="cart-item-quantity">                      
                       <button className="decrement" onClick={() => updateQuantity(item.id, -1)} disabled={item.quantity === 0}>-</button>
-                      <span>{item.quantity}</span>                      
+                      <span>{item.quantity}</span>                       
                       <button className="increment" onClick={() => updateQuantity(item.id, 1)} disabled={item.quantity === 1}>+</button>
                     </div>
                   </div>
                 </li>
               ))}
             </ul>
-            <a href="/Pagamentos">
-              <button className="checkout-btn">
-                <i className="fa-solid fa-basket-shopping"></i> Finalizar Compra
-              </button>
-            </a>
+            <button className="checkout-btn" onClick={handleCheckout}>
+              <i className="fa-solid fa-basket-shopping"></i> Finalizar Compra
+            </button>
           </div>
         </div>
       )}
+      
+      {showPopup && <PopupCompras message="Selecione a quantidade de cursos que você deseja comprar!" />}
     </div>
   );
 }

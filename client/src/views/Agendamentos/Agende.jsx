@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import "./AgendeEstilo.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import AgendaPopup from '../PopupAgenda/AgendaPopup';
+import EmailPop from '../PopupEmail/EmailPop';
+import CheckConfirm from '../CheckAgendamento/PopupConfirm'; 
 
 function AgendaEstilo() {
   const [phone, setPhone] = useState('');
@@ -8,6 +11,9 @@ function AgendaEstilo() {
   const [email, setEmail] = useState('');
   const [isAfterHours, setIsAfterHours] = useState(false);
   const [isBeforeAllowedTime, setIsBeforeAllowedTime] = useState(false);
+  const [showAgendaPopup, setShowAgendaPopup] = useState(false);
+  const [showEmailPopup, setShowEmailPopup] = useState(false);
+  const [showCheckConfirm, setShowCheckConfirm] = useState(false); 
 
   const handlePhoneChange = (e) => {
     let input = e.target.value;
@@ -48,12 +54,11 @@ function AgendaEstilo() {
     setIsBeforeAllowedTime(isBefore930AM);
 
     if (isAfter20Hours || isBefore930AM) {
-      alert('Horário inválido! O agendamento deve ser feito entre 09:30 e 20:00.');
+      setShowAgendaPopup(true);
       setDatetime('');
     }
   };
 
-  // Função para validar o e-mail
   const validateEmail = (email) => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
@@ -62,18 +67,17 @@ function AgendaEstilo() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Verificar se o e-mail é válido
     if (!validateEmail(email)) {
-      alert('Por favor, insira um e-mail válido!');
+      setShowEmailPopup(true);
       return;
     }
 
     if (isBeforeAllowedTime || isAfterHours) {
-      alert('Por favor, escolha um horário entre 09:30 e 20:00!');
+      setShowAgendaPopup(true);
       return;
     }
 
-    alert('Agendamento realizado com sucesso!');
+    setShowCheckConfirm(true); 
   };
 
   return (
@@ -170,7 +174,7 @@ function AgendaEstilo() {
                       value={datetime}
                       onChange={handleDatetimeChange}
                     />
-                  </div>
+                  </div>                  
                 </div>
 
                 <div className="input-box">
@@ -258,10 +262,10 @@ function AgendaEstilo() {
                 </div>
               </div>
 
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="btn-default"
-                disabled={isBeforeAllowedTime || isAfterHours} 
+                disabled={isBeforeAllowedTime || isAfterHours}
               >
                 <i className="fa-solid fa-check"></i>
                 Agendar
@@ -270,6 +274,10 @@ function AgendaEstilo() {
           </main>
         </section>
       </div>
+
+      {showAgendaPopup && <AgendaPopup message="Por favor, escolha um horário entre 09:30 e 20:00!" />}
+      {showEmailPopup && <EmailPop message="Por favor, insira um e-mail válido!" onClose={() => setShowEmailPopup(false)} />}
+      {showCheckConfirm && <CheckConfirm />}
     </>
   );
 }

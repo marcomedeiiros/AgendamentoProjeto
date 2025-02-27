@@ -232,16 +232,42 @@
   height: 220px;
 }
 
-.color {
+.pintar {
   transition: 0.2s ease-in-out;
   color: #333;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); 
 }
 
-.color:hover {
-  cursor: pointer;
-  color: #86392c;
+.color {
+  color: #333; 
+  font-weight: bold; 
+  text-decoration: none;
+  display: inline; 
+  margin-bottom: 5px; 
+  padding-bottom: 5px; 
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); 
+  cursor: pointer; 
 }
+
+.color:hover {
+  color: #86392c; 
+}
+
+.color::after {
+  content: ''; 
+  display: block; 
+  width: 100%; 
+  height: 2px;
+  background-color: #86392c;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 1); 
+  margin-top: 5px; 
+}
+
+.pintar:hover {  
+  color: #86392c;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); 
+}
+
 
 .map-container {
   display: flex;
