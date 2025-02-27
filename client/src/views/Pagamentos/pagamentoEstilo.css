@@ -1,0 +1,329 @@
+.fundo {
+    background-color: #a6c4e8;
+    height: 101vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: #ffffff;
+    width: 500px;
+    padding: 3em;
+    border-radius: 1em;
+    perspective: 800px;
+}
+
+.credit-card {
+    position: relative;
+    width: 350px;
+    height: 220px;
+    margin: auto;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(#33a4f8, #206df9);
+    border-radius: 1em;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    padding: 1em 1em;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.branding img {
+    width: 50px;
+    height: auto;
+}
+
+.card-back {
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+.card-number {
+    color: #ffffff;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    margin-top: 3em;
+}
+
+.details {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+    font-size: 0.8em;
+}
+
+.details span {
+    display: block;
+}
+
+.details #card-holder-name {
+    text-transform: uppercase;
+}
+
+.card-back .black-strip {
+    position: relative;
+    background-color: #000000;
+    height: 50px;
+    top: 2em;
+}
+
+.card-back .white-strip {
+    top: 3em;
+    position: relative;
+    text-align: right;
+}
+
+.card-back .white-strip span {
+    margin-right: 1em;
+}
+
+.card-back .white-strip div {
+    height: 30px;
+    background-color: #ffffff;
+    margin-top: 0.5em;
+}
+
+.card-back .visa-logo {
+    position: absolute;
+    width: 50px;
+    margin-top: 4em;
+    right: 1em;
+}
+
+.form-pagamento {
+    margin-top: 2em;
+}
+
+.form-pagamento label,
+.form-pagamento input {
+    display: block;
+}
+
+.form-pagamento label {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-pagamento input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 1em 0.5em;
+    border-radius: 0.5em;
+    font-size: 1em;
+}
+
+.form-pagamento input:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.form-pagamento .date-cvv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-pagamento .date-cvv div {
+    width: 48%;
+}
+
+.form-pagamento input:focus {
+    border-color: #33a4f8;
+    outline: none;
+}
+
+.form-pagamento label {
+    font-size: 1em;
+}
+
+.form-pagamento input {
+    font-size: 1.1em;
+    padding: 0.9em 0.5em;
+}
+
+.form-pagamento .date-cvv {
+    gap: 60px;
+}
+
+.form-pagamento .date-cvv div {
+    margin-bottom: 1em;
+}
+
+.seta-voltar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.seta-voltar span {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+.btn-enviar-pagamento {
+    background: linear-gradient(200deg, #25D366, #128C7E);
+    border: none;
+    color: white;
+    width: 510px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.botao-enviar:hover {
+    background: linear-gradient(200deg, #128C7E, #25D366);
+    background-color: #45a049;
+}
+
+.btn-credito {
+    background-color: #C0C0C0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-credito:hover {
+    background-color: #707070;
+}
+
+.btn-pix{
+    background-color: #009CDE;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+select#parcelas {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  select#parcelas:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  label[for="parcelas"] {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+
+  select#parcelas option {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+
+  select#parcelas option:hover {
+    background-color: #f0f0f0;
+  }
+
+.btn-pix:hover{
+    background-color: #004c6d;
+}
+
+.botao-enviar {
+    background-color: #128C7E;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.botao-enviar:hover {
+    background-color: #25D366;
+}
+
+.escolha-pagamento {
+    text-align: center;
+}
+
+.botao-escolher-pagamento {
+    margin: 10px;
+}
+
+.qr-code-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.qr-code {
+    margin-bottom: 20px;
+}
+
+.form-pix {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+    
+}
+
+.form-pix input {
+    padding: 8px;
+    margin: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
