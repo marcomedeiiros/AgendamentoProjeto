@@ -40,10 +40,10 @@ function Cart() {
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
                     <p className="cart-item-price">R${item.price.toFixed(2)}</p> 
-                    <div className="cart-item-quantity">
-                      <button onClick={() => updateQuantity(item.id, -1)} disabled={item.quantity === 0}>-</button>
-                      <span>{item.quantity}</span>
-                      <button onClick={() => updateQuantity(item.id, 1)} disabled={item.quantity === 1}>+</button>
+                    <div className="cart-item-quantity">                      
+                      <button className="decrement" onClick={() => updateQuantity(item.id, -1)} disabled={item.quantity === 0}>-</button>
+                      <span>{item.quantity}</span>                      
+                      <button className="increment" onClick={() => updateQuantity(item.id, 1)} disabled={item.quantity === 1}>+</button>
                     </div>
                   </div>
                 </li>
@@ -51,7 +51,7 @@ function Cart() {
             </ul>
             <a href="/Pagamentos">
               <button className="checkout-btn">
-                Finalizar Compra
+                <i className="fa-solid fa-basket-shopping"></i> Finalizar Compra
               </button>
             </a>
           </div>

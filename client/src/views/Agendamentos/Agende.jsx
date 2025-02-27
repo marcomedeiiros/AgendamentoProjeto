@@ -1,8 +1,81 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./AgendeEstilo.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function AgendaEstilo() {
+  const [phone, setPhone] = useState('');
+  const [datetime, setDatetime] = useState('');
+  const [email, setEmail] = useState('');
+  const [isAfterHours, setIsAfterHours] = useState(false);
+  const [isBeforeAllowedTime, setIsBeforeAllowedTime] = useState(false);
+
+  const handlePhoneChange = (e) => {
+    let input = e.target.value;
+
+    input = input.replace(/\D/g, '');
+
+    if (input.length <= 2) {
+      input = `(${input}`;
+    } else if (input.length <= 7) {
+      input = `(${input.slice(0, 2)}) ${input.slice(2)}`;
+    } else {
+      input = `(${input.slice(0, 2)}) ${input.slice(2, 7)}-${input.slice(7, 11)}`;
+    }
+
+    if (input.length > 15) {
+      input = input.slice(0, 15);
+    }
+
+    setPhone(input);
+  };
+
+  const handleDatetimeChange = (e) => {
+    const selectedDatetime = e.target.value;
+    setDatetime(selectedDatetime);
+
+    const selectedDate = new Date(selectedDatetime);
+    const selectedHour = selectedDate.getHours();
+    const selectedMinutes = selectedDate.getMinutes();
+
+    const allowedStartHour = 9;
+    const allowedStartMinutes = 30;
+    const allowedEndHour = 20;
+
+    const isAfter20Hours = selectedHour >= allowedEndHour;
+    const isBefore930AM = selectedHour < allowedStartHour || (selectedHour === allowedStartHour && selectedMinutes < allowedStartMinutes);
+
+    setIsAfterHours(isAfter20Hours);
+    setIsBeforeAllowedTime(isBefore930AM);
+
+    if (isAfter20Hours || isBefore930AM) {
+      alert('Horário inválido! O agendamento deve ser feito entre 09:30 e 20:00.');
+      setDatetime('');
+    }
+  };
+
+  // Função para validar o e-mail
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Verificar se o e-mail é válido
+    if (!validateEmail(email)) {
+      alert('Por favor, insira um e-mail válido!');
+      return;
+    }
+
+    if (isBeforeAllowedTime || isAfterHours) {
+      alert('Por favor, escolha um horário entre 09:30 e 20:00!');
+      return;
+    }
+
+    alert('Agendamento realizado com sucesso!');
+  };
+
   return (
     <>
       <div className="AgendaEstilo">
@@ -32,7 +105,7 @@ function AgendaEstilo() {
               </h1>
             </div>
 
-            <form action="" className="form">
+            <form action="" className="form" onSubmit={handleSubmit}>
               <div className="input-container">
                 <div className="input-box">
                   <label htmlFor="name" className="form-label">
@@ -59,9 +132,11 @@ function AgendaEstilo() {
                       name="phone"
                       className="form-control"
                       placeholder="(XX) XXXXX-XXXX"
-                      pattern="^\(\d{2}\) \d{5}-\d{4}$"
+                      value={phone}
+                      onChange={handlePhoneChange}
+                      maxLength="15"
                     />
-                    <i class="fa-solid fa-mobile-screen"></i>
+                    <i className="fa-solid fa-mobile-screen"></i>
                   </div>
                 </div>
 
@@ -75,9 +150,11 @@ function AgendaEstilo() {
                       name="email"
                       className="form-control"
                       placeholder="Digite seu e-mail..."
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                    <i class="fa-solid fa-envelope"></i>
+                    <i className="fa-solid fa-envelope"></i>
                   </div>
                 </div>
 
@@ -90,6 +167,8 @@ function AgendaEstilo() {
                       type="datetime-local"
                       name="birthdate"
                       className="form-control"
+                      value={datetime}
+                      onChange={handleDatetimeChange}
                     />
                   </div>
                 </div>
@@ -104,7 +183,7 @@ function AgendaEstilo() {
                       className="form-control"
                       placeholder="Deixe suas observações aqui..."
                     />
-                    <i class="fa-solid fa-bell"></i>
+                    <i className="fa-solid fa-bell"></i>
                   </div>
                 </div>
 
@@ -179,7 +258,11 @@ function AgendaEstilo() {
                 </div>
               </div>
 
-              <button type="submit" className="btn-default">
+              <button 
+                type="submit" 
+                className="btn-default"
+                disabled={isBeforeAllowedTime || isAfterHours} 
+              >
                 <i className="fa-solid fa-check"></i>
                 Agendar
               </button>
